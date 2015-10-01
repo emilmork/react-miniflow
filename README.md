@@ -1,7 +1,4 @@
-Simple Action-Store structure by using a higher-order function.
-
-### Work in progress 
-
+Get state from higher-order component passed down as props. 
 #### Install
 
 ```sh
@@ -63,8 +60,28 @@ setInterval(() => {
 setTimeout(() => {
   State.set('name', 'Bond');
 },1000);
+```
+
+Each listener will return an object with id and value.
 
 ```
+{ id: 'count', value: 'odjob' }
+```
+
+### State Methods
+
+* ### State.set(type, data) > this.props.[type] -> {id: type, value: data}
+
+* ### State.udpate(type, id, data, append) > this.props.[type] -> {id: id, value: data}
+
+* ### State.get(type) -> {id: type, value: data}
+
+* ### State.init(structure) -> Set initial structure
+
+* ### State.fire(event, data) -> emit event
+
+
+
 
 
 
