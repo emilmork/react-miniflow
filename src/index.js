@@ -57,5 +57,5 @@ var Types = {
 
 
 module.exports.State = State;
-module.exports.EnhancedComponent = EnhancedComponent;
+module.exports.Enhance = EnhancedComponent;
 module.exports.Types = Types;
