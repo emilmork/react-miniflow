@@ -3,7 +3,7 @@ var events = require('events');
 var utils = require('util');
 var React = require('react');
 var { Component } = React;
-var Store = require('./Store');
+var Store = require('../Store');
 
 var EnhancedComponent = (Component, listeners) => {
   class View extends Component {
