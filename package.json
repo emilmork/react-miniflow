@@ -1,6 +1,6 @@
 {
   "name": "react-miniflow",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A dead simple library for unidirectional dataflow using higher-order functions. ",
   "main": "./lib/index.js",
   "scripts": {
