@@ -21,7 +21,7 @@ class MyComponent extends React.Component {
     );
   }
 }
-export default EnhancedComponent(MyComponent,[{event:message, handler: (message) => {
+export default EnhancedComponent(MyComponent,[{event:'message', handler: (message) => {
     return message + " world";
 }]);
 ```
@@ -35,8 +35,10 @@ React.render(
 ```javascript
 Store.init({message: ''});
 
-Store.set('message', 'Hello');
+Store.update('message','_id','Hello');
 ```
+
+Will output 'Hello world'
 
 When the store is updated MyComponent will be updated with the new props.
 
