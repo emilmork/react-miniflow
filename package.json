@@ -1,11 +1,11 @@
 {
   "name": "react-miniflow",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A dead simple library for unidirectional dataflow using higher-order functions. ",
   "main": "./lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",
-    "compile": "babel -d lib index.js",
+    "compile": "babel -d lib src",
     "prepublish": "npm run compile"
   },
   "repository": {

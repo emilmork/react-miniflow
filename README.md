@@ -8,7 +8,10 @@ Simple Action-Store structure by using a higher-order function.
 $ npm install react-miniflow
 ```
 
-#### Usage
+#### Instructions
+
+
+
 
 ```javascript
 import { Store, EnhancedComponent } from 'react-miniflow';

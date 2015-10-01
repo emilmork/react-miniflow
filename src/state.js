@@ -2,11 +2,16 @@ var Immutable = require('immutable');
 var events = require('events');
 var utils = require('util');
 
-var Store = function() {
+var Types = {
+  List: Immutable.List.of(),
+  Map: Immutable.Map()
+};
+
+var State = function() {
     this.structure = Immutable.Map();
 
-    if (Store.instance) return Store.instance;
-    Store.instance = this;
+    if (State.instance) return State.instance;
+    State.instance = this;
 
     this.init = (structure) => this.structure = Immutable.Map(structure);
 
@@ -24,12 +29,14 @@ var Store = function() {
         this.emit(type, { id: id, value: this.structure.get(type) });
     }
 
-    this.get = (type) => this.structure.get(type);
+    this.get = (type) => {
+        return { id: type, value: this.structure.get(type) };
+    }
 
     this.fire = (type, data) => { 
         this.emit(type, data)
     }
 }
 
-utils.inherits(Store, events.EventEmitter);
-module.exports = new Store();
+utils.inherits(State, events.EventEmitter);
+module.exports = new State();

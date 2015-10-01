@@ -1,29 +1,29 @@
 var should = require('chai').should(),
     miniFLow = require('../lib/index.js'),
     Enhance = miniFLow.EnhancedComponent,
-    Store = miniFLow.Store;
+    State = miniFLow.State;
 
 
-describe('Store', function() {
+describe('State', function() {
   it('Should create structure', function(done) {
-    Store.init({foo : 'bar'});
+    State.init({foo : 'bar'});
 
-    Store.on('foo', function(data) {
+    State.on('foo', function(data) {
       data.value.should.equal("zoo");
       done();
     });
 
-    Store.set('foo', 'zoo');
+    State.set('foo', 'zoo');
   });
 
   it('Should append structure', function(done) {
-    Store.init({list : [1,2,3]});
+    State.init({list : [1,2,3]});
 
-    Store.on('list', function(data) {
+    State.on('list', function(data) {
       data.value.should.have.length(7);
       done();
     });
 
-    Store.update('list','someId', [4,5,6,7], true);
+    State.update('list','someId', [4,5,6,7], true);
   });
 });
