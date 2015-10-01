@@ -1,0 +1,42 @@
+{
+  "name": "react-miniflow",
+  "version": "0.1.0",
+  "description": "A dead simple library for unidirectional dataflow using higher-order functions. ",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "compile": "babel -d lib index.js",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilmork/react-miniflow.git"
+  },
+  "keywords": [
+    "data",
+    "event",
+    "action",
+    "store",
+    "dataflow",
+    "architecture",
+    "flux",
+    "react"
+  ],
+  "author": "Emil Mork <emil.a.mork@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emilmork/react-miniflow/issues"
+  },
+  "homepage": "https://github.com/emilmork/react-miniflow#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "events": "^1.1.0",
+    "immutable": "^3.7.5",
+    "react": "^0.13.3",
+    "util": "^0.10.3"
+  }
+}
