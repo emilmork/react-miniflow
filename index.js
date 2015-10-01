@@ -33,6 +33,7 @@ var Store = function() {
     }
 }
 
+utils.inherits(Store, events.EventEmitter);
 
 var EnhancedComponent = (Component, listeners) => {
   class View extends Component {
@@ -62,6 +63,5 @@ var EnhancedComponent = (Component, listeners) => {
 }
 
 
-utils.inherits(Store, events.EventEmitter);
 module.exports.Store = new Store();
 module.exports.EnhancedComponent = EnhancedComponent;
