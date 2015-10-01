@@ -1,7 +1,7 @@
 {
   "name": "react-miniflow",
   "version": "0.1.6",
-  "description": "A dead simple library for unidirectional dataflow using higher-order functions. ",
+  "description": "A simple library for unidirectional dataflow in React and React Native.",
   "main": "./lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --reporter spec",

@@ -1,4 +1,3 @@
-Get state from higher-order component passed down as props. 
 #### Install
 
 ```sh
