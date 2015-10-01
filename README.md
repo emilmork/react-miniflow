@@ -71,7 +71,7 @@ Each listener will return an object with id and value.
 
 * ### State.set(type, data) > this.props.[type] -> {id: type, value: data}
 
-* ### State.udpate(type, id, data, append) > this.props.[type] -> {id: id, value: data}
+* ### State.update(type, id, data, append) > this.props.[type] -> {id: id, value: data}
 
 * ### State.get(type) -> {id: type, value: data}
 

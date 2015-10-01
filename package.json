@@ -1,6 +1,6 @@
 {
   "name": "react-miniflow",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A simple library for unidirectional dataflow in React and React Native.",
   "main": "./lib/index.js",
   "scripts": {
