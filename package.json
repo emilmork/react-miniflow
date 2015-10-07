@@ -1,12 +1,18 @@
 {
   "name": "react-miniflow",
-  "version": "0.1.8",
+  "version": "1.0.0",
   "description": "A simple library for unidirectional dataflow in React and React Native.",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec",
+    "test": "jest",
     "compile": "babel -d lib src",
     "prepublish": "npm run compile"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   },
   "repository": {
     "type": "git",
@@ -30,8 +36,8 @@
   "homepage": "https://github.com/emilmork/react-miniflow#readme",
   "devDependencies": {
     "babel": "^5.8.23",
-    "chai": "^3.3.0",
-    "mocha": "^2.3.3"
+    "babel-jest": "^5.3.0",
+    "jest-cli": "^0.5.10"
   },
   "dependencies": {
     "events": "^1.1.0",
