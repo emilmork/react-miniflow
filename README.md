@@ -23,7 +23,7 @@ var Component = Enhance(
 
 // Update state
 setInterval(() => {
-  State.set('count', (State.get('count')+1);
+  State.set('count', State.get('count')+1);
 },1000)
 
 ```
