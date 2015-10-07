@@ -19,13 +19,13 @@ var Component = Enhance(
     render() {
       if(this.props.count == null) return null;
 
-      return <h2>{ this.props.count.value }</h2>
+      return <h2>{ this.props.count }</h2>
     }
 },['count']);
 
 // Update state
 setInterval(() => {
-  State.set('count', (State.get('count').value)+1);
+  State.set('count', (State.get('count')+1);
 },1000)
 
 ```
@@ -43,16 +43,16 @@ var Component = Enhance(
       if(this.props.count == null) return null;
 
       return <div>
-        <h2>{ this.props.count.value }</h2>
+        <h2>{ this.props.count }</h2>
         <h2>{ this.props.name }</h2>
       </div>
     }
-},['count',{event: 'name', handler: (data) => {
-  return `Hello Mr.${data.value}`
+},['count',{event: 'name', handler: (name) => {
+  return `Hello Mr.${name}`
 }}]);
 
 setInterval(() => {
-  State.set('count', (State.get('count').value)+1);
+  State.set('count', (State.get('count')+1);
 },1000)
 
 // Update state
@@ -61,23 +61,19 @@ setTimeout(() => {
 },1000);
 ```
 
-Each listener will return an object with id and value.
-
-```
-{ id: 'count', value: 'odjob' }
-```
-
 ### State Methods
 
 * ### State.set(type, data) > this.props.[type] -> {id: type, value: data}
-
-* ### State.update(type, id, data, append) > this.props.[type] -> {id: id, value: data}
 
 * ### State.get(type) -> {id: type, value: data}
 
 * ### State.init(structure) -> Set initial structure
 
 * ### State.fire(event, data) -> emit event
+---
+#### Changelog:
+##### 1.0.0 - Api changes - Change datastructure to return only data not id and value
+
 
 
 

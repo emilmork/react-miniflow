@@ -34,7 +34,7 @@ var EnhancedComponent = (Component, listeners) => {
       listeners.forEach((l) => {
         var event = eventName(l),
           data = State.get(event);
-        state[event] = eventData(l, data);
+          state[event] = eventData(l, data);
       });
       this.setState(state);
     }
