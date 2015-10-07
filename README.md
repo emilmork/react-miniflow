@@ -17,8 +17,6 @@ State.init({count: 0});
 var Component = Enhance(
   class extends React.Component {
     render() {
-      if(this.props.count == null) return null;
-
       return <h2>{ this.props.count }</h2>
     }
 },['count']);
@@ -40,8 +38,6 @@ State.init({count: 0, name: 'Odjob'});
 var Component = Enhance(
   class extends React.Component {
     render() {
-      if(this.props.count == null) return null;
-
       return <div>
         <h2>{ this.props.count }</h2>
         <h2>{ this.props.name }</h2>
